@@ -42,3 +42,7 @@ SELECT DATE_FORMAT(
 	'%Y-%m-%dT%H:%i:%S+08:00'
 ) AS createdAt
 ```
+
+### BINARY存储比特类型的数据
+
+很多用于标示ID的随机字符串实际上16进制表示的一串随机比特，如UUID、苹果的device token，这种数据用BINARY存储，既可以节省存储空间，也可以加快查询速度。
