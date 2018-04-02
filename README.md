@@ -1,4 +1,4 @@
-# Stype Guide and Pitfalls
+# Style Guide and Pitfalls
 
 * [MySQL](./mysql.md)
 * [Node.js](./node.md)
