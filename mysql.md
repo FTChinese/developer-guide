@@ -67,8 +67,8 @@ Examples:
 
 ```sql
 CREATE TABLE user (
-	unique_id 	BINARY(16) NOT NULL,
-				UNIQUE INDEX(unique_id)
+	unique_id BINARY(16) NOT NULL,
+	UNIQUE INDEX(unique_id)
 );
 ```
 NOTE: 这里字段名没有使用uuid，因为uuid是MySQL的一个函数名。
@@ -76,7 +76,7 @@ NOTE: 这里字段名没有使用uuid，因为uuid是MySQL的一个函数名。
 插入数据：
 ```sql
 INSERT INTO user
-	SET unique_id = UNHEX(REPLACE(?, '-', ''));
+SET unique_id = UNHEX(REPLACE(?, '-', ''));
 ```
 
 取出数据：
@@ -95,15 +95,15 @@ FROM user;
 ```sql
 CREATE TABLE ios_device (
 	PRIMARY KEY (token),
-	token		BINARY(32)	NOT NULL,
-	created_utc DATETIME	NOT NULL DEFAULT CURRENT_TIMESTAMP
+	token BINARY(32) NOT NULL,
+	created_utc DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 ```
 
 插入数据：
 ```sql
 INSERT INTO ios_device
-	SET token = HEX(?);
+SET token = HEX(?);
 ```
 
 取出数据：
