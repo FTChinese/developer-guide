@@ -22,9 +22,9 @@
        |               |              |            |                       
        |               |              |            |                       
        |               |              |            |                       
-+-----------+  +---------------+  +-------+  +----------+                  
-|Web Client |  |Browser Client |  |  iOS  |  |  Android |                  
-+-----------+  +---------------+  +-------+  +----------+                  
+ +-----------+  +---------------+  +-------+  +----------+                  
+ |Web Client |  |Browser Client |  |  iOS  |  |  Android |                  
+ +-----------+  +---------------+  +-------+  +----------+                  
                                                                                                                                         
                                                                            
 * API should mostly written in static, strongly-type languages (Golang or Java), and should be distributed.
