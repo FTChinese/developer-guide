@@ -1,9 +1,14 @@
-# Style Guide and Pitfalls
+Reading for FTC Tech Team.
+
+## Style Guide and Pitfalls
 
 * [MySQL](./mysql.md)
 * [Node.js](./node.md)
 * [PHP](./php.md)
 * [Golang](./go.md)
+
+## Table of Contents
+
 * [架构](#architecture)
 * [语言与框架选择](#语言与框架)
 
@@ -64,6 +69,8 @@
 Golang基本上不需要框架，标准库已经提供了创建网站的大部分必备工具。
 
 Golang写HTTP服务的特点是，它不需要搭建运行环境，因为Golang直接编译成一个独立的二进制文件。Golang编译器支持跨平台编译，不管你在哪个平台上写代码，都可以在本机直接编译成Linux版本，把编译好的文件直接上传到服务器硬盘上就可以运行了。不需要学习复杂的构建工具。和Unix平台上的工具（如make、rsync、systemd）配合使用就可以满足基本的需求。
+
+只需要能把外部请求通过Nginx代理到Golang HTTP server运行的端口就可以，这大概是唯一需要配置的地方。
 
 ### Python
 * 框架 [tornado](http://www.tornadoweb.org/en/stable/) 或 [twisted](https://github.com/twisted/twisted) 两个异步框架。和上述相比，综合而言没有比较优势，除非是Python忠实用户。
