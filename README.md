@@ -64,7 +64,7 @@ Reading for FTC Tech Team.
 
 管理和安装PHP组件的工具叫[composer](https://getcomposer.org/)。Composer之于PHP，就是NPM之于Node.js。参照Node.js来理解：
 
- | PHP | Node.js
+ . | PHP | Node.js
 -------|-----------|------
 包管理  | composer  | npm
 安装目录  | vendor  | node_modules
