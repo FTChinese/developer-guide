@@ -48,12 +48,28 @@ Reading for FTC Tech Team.
 
 * 框架 [Koa.js](http://koajs.com/)
 * 模版 [Nunjucks](http://mozilla.github.io/nunjucks/) 这是对Python世界的Jinja 2的移植
+* 部署工具[PM2](http://pm2.keymetrics.io/)
+
+参考[awesome node](https://github.com/sindresorhus/awesome-nodejs)找你需要的包。
 
 ### PHP
 * 框架 [Slim](https://www.slimframework.com/) 一个微框架，依然是基于php-fpm运行的。
-* 模版 [Twig](https://twig.symfony.com/) 和Jinja 2很类似 -- 也就是说和Node.js中的Nunjucks很相似。
+* 模版 [Twig](https://twig.symfony.com/) 和Jinja 2很类似 -- 也就是说和Node.js中的Nunjucks很相似，十分便于在Node.js、Python、PHP之间迁移模版。当前的Twig版本需要使用PHP 7才行。
+* 部署工具推荐[capistrano](http://capistranorb.com/)的较多。
 
 如果选择使用[swoole](https://www.swoole.com/)这个异步引擎，性能会得到极大的提升。简单理解，它就是PHP版的Node.js，加上类似于Golang的coroutine机制。因此，它不需要php-fpm，内置服务器启动以后，Nginx代理过去，这和Node.js、Java的vert.x运行方式一样。
+
+> Modern PHP is less about monolithic frameworks and more about composing solutions from specialized and interoperable components.
+
+管理和安装PHP组件的工具叫[composer](https://getcomposer.org/)。Composer之于PHP，就是NPM之于Node.js。参照Node.js来理解：
+
+ | PHP | Node.js
+-------|-----------|------
+包管理  | composer  | npm
+安装目录  | vendor  | node_modules
+索引网站  | https://packagist.org/  |  https://www.npmjs.com/
+
+PHP工具还可以参考[awesome php](https://github.com/ziadoz/awesome-php)
 
 ### Java
 
@@ -71,6 +87,29 @@ Golang基本上不需要框架，标准库已经提供了创建网站的大部�
 Golang写HTTP服务的特点是，它不需要搭建运行环境，因为Golang直接编译成一个独立的二进制文件。Golang编译器支持跨平台编译，不管你在哪个平台上写代码，都可以在本机直接编译成Linux版本，把编译好的文件直接上传到服务器硬盘上就可以运行了。不需要学习复杂的构建工具。和Unix平台上的工具（如make、rsync、systemd）配合使用就可以满足基本的需求。
 
 只需要能把外部请求通过Nginx代理到Golang HTTP server运行的端口就可以，这大概是唯一需要配置的地方。
+
+Golang的包管理工具是官方出的[dep](https://golang.github.io/dep/)。在`dep`推出之前，有很多非官方包管理工具，均不再推荐使用。
+
+Golang对开发目录做出了比较严格的限制，为避免在这里出现问题，我们均把源码放在`~/go/src`下面（这是默认设置）。也就是说，每个人本机上的目录都是这样的结构：
+```
+~/go/bin
+    /pkg
+    /src
+        /github.com
+                   /FTChinese
+                             /your-project-name
+        /gitlab.com
+                   /ftchinese
+                             /your-project-name
+        /golang.org
+        /sourcegraph.com
+```
+
+编辑器目前使用 VS Code与Golang的结合很好，代码提示、错误提醒、自动测试。
+
+由于Golang不是面向对象的编程语言（当然也不是纯过程式），因此ORM这种面向对象-关系数据的处理方式并不适用于Golang来处理SQL数据库。目前没有什么很好的抽象方式，直接写SQL语句就行了，Golang的[raw string](https://golang.org/ref/spec#String_literals)写SQL语句很方便。
+
+Golang工具可以参考[awesome golang](https://github.com/avelino/awesome-go)
 
 ### Python
 * 框架 [tornado](http://www.tornadoweb.org/en/stable/) 或 [twisted](https://github.com/twisted/twisted) 两个异步框架。和上述相比，综合而言没有比较优势，除非是Python忠实用户。
