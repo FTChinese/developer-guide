@@ -44,6 +44,8 @@ Reading for FTC Tech Team.
 
 下述框架，只有Slim属于传统PHP架构需要使用FastCGI配合服务器软件（Nginx）调度进程，其余要么采用异步模式，要么就是Golang的Goroutine模式，框架或者语言本身负责调度，服务器软件只需反向代理过去即可。
 
+对于各种解释性动态语言，需要外部运行环境的，最好的部署方案或许是使用容器技术: [kubernetes](https://kubernetes.io/)和[docker](https://www.docker.com/)。
+
 ### Node.js
 
 * 框架 [Koa.js](http://koajs.com/)
