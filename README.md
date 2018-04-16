@@ -39,7 +39,7 @@ Reading for FTC Tech Team.
 
 * API should mostly written in static, strongly-type languages (Golang or Java), and should be distributed.
 * Web client (by 'web client' we mean to server side) as front-end could be written in dynamic languages. They should be restricted to Node.js or PHP 7. Python might be used for supporting roles like natural language processing.
-* Even so, we are using 5 programming languages: Golang, Java, Swift, JavaScript, PHP. The choices of languages should be stricted limited. Languages such as Scala, F#, Haskell, Erlang that have a very steep learning curve or are not that widely employed should not be encouraged or even prohibited since it's not easy to find a replacement when the creator/maintainer of the project leaves.
+* Even so, we are using 5 programming languages: Golang, Java, Swift, JavaScript, PHP. The languages allowed to use should be stricted limited. Languages such as Scala, F#, Haskell, Erlang that have a very steep learning curve or are not that widely employed should not be encouraged or even prohibited since it's not easy to find a replacement when the creator/maintainer of the project leaves.
 
 ## 语言与框架
 
