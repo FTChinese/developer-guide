@@ -52,7 +52,7 @@ Reading for FTC Tech Team.
 * 模版 [Nunjucks](http://mozilla.github.io/nunjucks/) 这是对Python世界的Jinja 2的移植
 * 部署工具[PM2](http://pm2.keymetrics.io/)
 
-参考[awesome node](https://github.com/sindresorhus/awesome-nodejs)找你需要的包。
+参考[awesome node](https://github.com/sindresorhus/awesome-nodejs)找你需要的工具。
 
 ### PHP
 * 框架 [Slim](https://www.slimframework.com/) 一个微框架，依然是基于php-fpm运行的。
@@ -77,13 +77,13 @@ PHP工具还可以参考[awesome php](https://github.com/ziadoz/awesome-php)
 
 ### Java
 
-* 框架 [vert.x](https://vertx.io/) Java世界的Node.js。不同的是，vert.x是多线程的，每一个线程上运行类似于Node.js的事件循环机制。你可以把它当成多线程版的Node.js，也会同样遇到”回调地狱“的问题。解决方法是使用[ReactiveX](http://reactivex.io/) -- 好吧，你又得多学一套东西了。
-* 模版 [Thymeleaf](https://www.thymeleaf.org/) 或者其他vert.x支持的模版，见官方文档。
-* SQL [jOOQ](https://www.jooq.org/) Java里面直接写SQL语句实在很糟糕，无法格式化，只能字符串拼接，所以必须使用某种ORM。
+* 框架 [vert.x](https://vertx.io/). Java世界的Node.js。不同的是，vert.x是多线程的，每一个线程上运行类似于Node.js的事件循环机制。你可以把它当成多线程版的Node.js，也会同样遇到“回调地狱”的问题。解决方法是使用[ReactiveX](http://reactivex.io/) -- 好吧，你又得多学一套东西了。
+* 模版 [Thymeleaf](https://www.thymeleaf.org/). 或者其他vert.x支持的模版，见官方文档。
+* SQL [jOOQ](https://www.jooq.org/). Java里面直接写SQL语句实在很糟糕，无法格式化，只能字符串拼接，所以必须使用某种ORM，那么我们选择使用轻量级的ORM，而不是Hibernate之类学习曲线过于陡峭的工具。
 
-对于Java，了解复杂的Maven（文档极不健全）并习惯写XML，或者Gradle（文档很长，几十章）以及它所使用DSL语言，必不可少。此外可能还需要建立Jenkins作持续集成 -- 以及它使用的DSL语言。
+对于Java，了解复杂的Maven（文档混乱）并习惯写XML，或者Gradle（文档很长，几十章）以及它所使用DSL语言，必不可少。此外可能还需要建立Jenkins作持续集成 -- 以及它使用的DSL语言。
 
-能使用Vert.x之前的投入比较高。当然，使用Java的其他框架也一样，Spring全家桶比这些要学的更多。
+能使用Vert.x之前的投入比较高。当然，使用Java的其他框架也一样，Spring全家桶比这些要学的更多，而且混乱。
 
 ### Golang
 Golang基本上不需要框架，标准库已经提供了创建网站的大部分必备工具。
