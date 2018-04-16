@@ -26,7 +26,7 @@
 
 表示Duration概念的，如一个动作持续了多久，当然还要使用Unix时间戳。
 
-## 时区选择
+#### 时区选择
 
 使用UTC时间，不管你在哪里，不管你的机器运行在什么时区，统一使用`0`时区时间。时间列的命名最好标示出来这是UTC时间：`created_utc`, `updated_utc`, `published_utc`, `last_modified_utc`，等等。
 
@@ -51,6 +51,19 @@ SELECT DATE_FORMAT(
 	DATE_ADD(created_utc, INTERVAL 8 HOUR),
 	'%Y-%m-%dT%H:%i:%S+08:00'
 ) AS createdAt
+```
+
+MySQL文档中关于时区的部分分散在不同的章节中，你应该阅读这些：
+
+* [MySQL Server Time Zone Support](https://dev.mysql.com/doc/refman/5.7/en/time-zone-support.html)
+* [Set server options for time zone](https://dev.mysql.com/doc/refman/5.7/en/server-options.html#option_mysqld_default-time-zone)
+* [Set dynamic system variables for time zone](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_time_zone)
+* [Date and Time Functions](https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html)
+
+在`~/my.cnf`中设置时区：
+```
+[mysqld]
+default-time-zone='+00:00'
 ```
 
 ### BINARY存储比特类型的数据
