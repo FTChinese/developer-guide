@@ -14,6 +14,9 @@ Reading for FTC Tech Team.
 
 ## Architecture
 ```
+                        database
+                            |
+                            |
                     +------------------+
                     |       API        |
                     +------------------+
