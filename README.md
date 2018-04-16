@@ -119,5 +119,5 @@ Golang对开发目录做出了比较严格的限制，为避免在这里出现�
 Golang工具可以参考[awesome golang](https://github.com/avelino/awesome-go)
 
 ### Python
-* 框架 [tornado](http://www.tornadoweb.org/en/stable/) 或 [twisted](https://github.com/twisted/twisted) 两个异步框架。和上述相比，综合而言没有比较优势，除非是Python忠实用户。
-* 模版 [Jinja 2](http://jinja.pocoo.org/) 简洁强大的模版引擎
+* 框架 [tornado](http://www.tornadoweb.org/en/stable/) 或 [twisted](https://github.com/twisted/twisted) 两个异步框架。
+* 模版 [Jinja 2](http://jinja.pocoo.org/) 影响了Node.js的Nunjucks和PHP的Twig。
