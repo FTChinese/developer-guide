@@ -2,10 +2,10 @@ Reading for FTC Tech Team.
 
 ## Style Guide and Pitfalls
 
-* [MySQL](./mysql.md)
-* [Node.js](./node.md)
-* [PHP](./php.md)
-* [Golang](./go.md)
+* [MySQL](./mysql/mysql.md)
+* [Node.js](./nodejs/node.md)
+* [PHP](./php/php.md)
+* [Golang](./golang/go.md)
 
 ## Table of Contents
 
