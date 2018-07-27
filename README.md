@@ -16,7 +16,7 @@ Node.js。这是我们将来的主要工具，主要做Web客户端、使用规�
 
 PHP。这是历史遗留，相关工具链已经长期停留在PHP5、一个古老的Smarty版本和古老的CodeIgnitor框架，即便要用，也必须升级到PHP、现代化的微框架和模版引擎。如果必须使用，PHP和Node.js的作用相同。禁止进入Golang所处的基础设施行列。
 
-Java系。FTC并不提倡Java系的语言。需要用到也是做一些基础设施，和Golang互补。Java系我们只提倡使用Kotlin。不提倡Scalar，学习曲线陡峭，工程师几乎不可能招到，而语言本身高并发的特性，不管是Golang还是Kotlin都可以提供。
+Java系。我们并不提倡Java系的语言。需要用到也是做一些基础设施，和Golang互补。Java系我们只提倡使用Kotlin。不提倡Scalar，学习曲线陡峭，工程师几乎不可能招到，而语言本身高并发的特性，不管是Golang还是Kotlin都可以提供。
 
 移动端iOS用swift；Android用Kotlin。没得选择，没有争议。
 
