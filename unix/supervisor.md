@@ -2,7 +2,7 @@
 
 ### 查看程序运行状态
 
-* `supervisorctl status` 显示一个进程的状态
+* `supervisorctl status` 显示进程的状态
 * `supervisorctl status <name>` 显示指定进程的状态
 
 ### 启动进程
