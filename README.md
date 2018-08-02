@@ -1,14 +1,8 @@
-Reading for FTC Tech Team.
+Repo: `https://github.com/FTChinese/developer-guide`
+
+# Overview
 
 ## TOC
-
-### OS and DevOps
-
-* [Supervisor](./unix/supervisor.md)
-
-### MySQL
-
-* [Introduction](./mysql/mysql.md)
 
 ### Node.js
 
@@ -18,6 +12,18 @@ Reading for FTC Tech Team.
 ### Golang
 
 * [Introduction](./golang/introduction.md)
+
+### MySQL
+
+* [Introduction](./mysql/mysql.md)
+
+### OS and DevOps
+
+* [Supervisor](./unix/supervisor.md)
+
+### Version Control
+
+* [SSH with Git](./version-control/ssh-with-git)
 
 ## External Links and must-read
 
@@ -45,23 +51,23 @@ Reading for FTC Tech Team.
 
 从整体架构上，也需要做到解偶。数据层、UI层、逻辑层，都要相互独立，通过一致的接口来交流。要做到某一层，用完全不同的技术替换了，却不需要更改任何其他层的东西。
 
-每种语言采用统一的项目结构。自己的项目，爱怎么写怎么写，不需要和别人交流，自己方便、自己明白就行。但是作为机构，必须使用统一的目录结构，要保证任何其他人不需要翻开代码，看一眼就明白每个文件、每个文件夹是在干什么，要保证任何一个项目，原开发者离开了，马上有人就可以接手。工程不是艺术，这个问题上不要自由发挥，创造力用在代码上。不要在项目结构上制造成本。
+每种语言采用统一的项目结构。自己的项目，爱怎么写怎么写，不需要和别人交流，自己方便、自己明白就行。但是作为机构，必须使用统一的目录结构，要保证任何其他人不需要翻开代码，看一眼就明白每个文件、每个文件夹是在干什么。工程不是艺术，这个问题上不要自由发挥，创造力用在代码上。不要在项目结构上制造成本。
 
 ## 语言
 
-虽然语言并不起决定性作用，但学习任何一门语言总是有成本的，限于人力，我们必须限制语言的选择，不能因为某个人掌握了一门生僻的语言，就任由在公司使用，这会造成使用者离职后无人接手、或者寻找继任者成本极高的局面，所以语言的选择要考虑语言的学习曲线、寻找工程师的难易程度。
+虽然语言并不起决定性作用，但学习任何一门语言总是有成本的，限于人力，我们应该对语言提供优先的选择，不能因为某个人掌握了一门生僻的语言，就任由在公司使用，这会造成使用者离职后无人接手、或者寻找继任者成本极高的局面，所以语言的选择要考虑语言的学习曲线、寻找工程师的难易程度。
 
-Golang。我们主要Golang做基础设施，如API、高并发场景等。已有的经验也证明了，就我们的规模而言，Golang可以用最少的资源换来极佳的效率。
+Golang。学习曲线低，性能高。主要做基础设施，如API、高并发场景等。已有的经验也证明了，就我们的规模而言，Golang可以用最少的资源换来极佳的效率。
 
-Node.js。这是我们将来的主要工具，主要做Web客户端、使用规模较小的API或需要快速开发出来的原型等。
+Node.js。或许我们将来的主要工具，主要做Web客户端、使用规模较小的API或需要快速开发出来的原型等。目前的观察看，稍微复杂点的项目Node.js的CPU占用率很高。原因未知。
 
-PHP。这是历史遗留，相关工具链已经长期停留在PHP5、一个古老的Smarty版本和古老的CodeIgnitor框架，即便要用，也必须升级到PHP、现代化的微框架和模版引擎。如果必须使用，PHP和Node.js的作用相同。禁止进入Golang所处的基础设施行列。
+PHP。当前网站完全用PHP，相关工具链已经长期停留在比较老的版本，需要升级。新版本可以提供更好的性能，也更加贴近现代语言。
 
-Java系。我们并不提倡Java系的语言。需要用到也是做一些基础设施，和Golang互补。Java系我们只提倡使用Kotlin。不提倡Scalar，学习曲线陡峭，工程师几乎不可能招到，而语言本身高并发的特性，不管是Golang还是Kotlin都可以提供。
+Java系。需要使用的情况下提倡使用Kotlin。不提倡Scalar，学习曲线陡峭，熟悉Scalar的工程师很难找到，成本太高，而语言本身高并发的特性，不管是Golang还是Kotlin都可以提供。
 
-移动端iOS用swift；Android用Kotlin。没得选择，没有争议。
+移动端iOS用swift；Android用Kotlin。
 
-其他语言，Rust、C#都很不错，但是我们不会用。Erlang、Haskell自己回家学，但是不要在公司里用，和Scalar同理。
+其他语言，Rust、C#都很不错，但是我们不会用。Erlang、Haskell自己学可以，但是不要在公司里用，和Scalar同理。
 
 ## Architecture
 ```

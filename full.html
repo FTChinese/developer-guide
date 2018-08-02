@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>full</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>Repo: <code>https://github.com/FTChinese/developer-guide</code></p>
+<h1 id="overview">Overview</h1>
+<h2 id="toc">TOC</h2>
+<h3 id="node.js">Node.js</h3>
+<ul>
+<li><a href="./nodejs/introduction.md">Introduction</a></li>
+<li><a href="./nodejs/project-structure.md">Project Structure</a></li>
+</ul>
+<h3 id="golang">Golang</h3>
+<ul>
+<li><a href="./golang/introduction.md">Introduction</a></li>
+</ul>
+<h3 id="mysql">MySQL</h3>
+<ul>
+<li><a href="./mysql/mysql.md">Introduction</a></li>
+</ul>
+<h3 id="os-and-devops">OS and DevOps</h3>
+<ul>
+<li><a href="./unix/supervisor.md">Supervisor</a></li>
+</ul>
+<h3 id="version-control">Version Control</h3>
+<ul>
+<li><a href="./version-control/ssh-with-git">SSH with Git</a></li>
+</ul>
+<h2 id="external-links-and-must-read">External Links and must-read</h2>
+<ul>
+<li><a href="https://github.com/standard/standard">JavaScript Standard Style</a></li>
+<li><a href="https://github.com/felixge/node-style-guide">Node.js Style Guide</a></li>
+<li><a href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide</a></li>
+<li><a href="https://google.github.io/styleguide/jsguide.html">Google JavaScript Style Guide</a></li>
+<li><a href="https://github.com/sindresorhus/awesome-nodejs">awesome node</a></li>
+<li><a href="http://www.sqlstyle.guide/">SQL Style Guide</a></li>
+<li><a href="http://www.phptherightway.com/">PHP the Right Way</a></li>
+<li><a href="https://www.php-fig.org/psr/psr-2/">PSR-2: Coding Style Guide</a></li>
+<li><a href="https://www.amazon.com/Modern-PHP-Features-Good-Practices/dp/1491905018">Moden PHP</a></li>
+</ul>
+<h2 id="原则">原则</h2>
+<p>对于Web客户端开发，我们对质量的的要求可以分成几层：<code>Basic</code>、<code>Enhanced</code>。最低等级的要求是<code>Basic</code>，一个完整的app必须达到这一级才算及格，并且必须首先达到这一级，有可能你会首先满足了<code>Enhanced</code>的要求，却没有达到<code>Basic</code>的要求，那么也是不合格的。</p>
+<p><code>Basic</code>的要求之一是，Web客户端必须在没有JS的情况下，具备完整的功能，换句话说，服务器端的功能必须完整，用户即便在没有JS的浏览器中，依然可以完成所有的表单填写、可以查看到所有有权限的数据、任何错误都可以得到提示信息。这一阶段的重点工作是必须让服务器端具有完整的功能，即便体验不是很好，即便数据的处理繁复无比，也得保证做到数据的交互必须是持续的，绝不能中断。这一阶段，必须抑制住自己炫技的冲动，不管你的浏览器端JS写得多好、SASS写的多酷炫，都不是这一阶段的重点。驾驭能力体现在，知道什么时候、什么地方，运用合适的技术。</p>
+<p>针对动态、弱类型语言，一定要约束好自己，做到：</p>
+<p>模块化。每一个函数、每一个类，尽量独立、封装起来，放在属于自己的文件里，文件名要能够简单第表达出来这个文件是干什么用的，不要在一个文件中放毫不相干的函数、类。用文件夹、文件去组成一个有机的结构。只有模块化了，才能解偶。</p>
+<p>解偶。每一个函数、每一个类、每一个项目，只完成一个工作、一个任务，不要试图在一个函数里试图完成n个功能，一堆if…else。从单元测试开始，写完一个函数、一个类，只调用它能不能完成一个单元测试？</p>
+<p>从整体架构上，也需要做到解偶。数据层、UI层、逻辑层，都要相互独立，通过一致的接口来交流。要做到某一层，用完全不同的技术替换了，却不需要更改任何其他层的东西。</p>
+<p>每种语言采用统一的项目结构。自己的项目，爱怎么写怎么写，不需要和别人交流，自己方便、自己明白就行。但是作为机构，必须使用统一的目录结构，要保证任何其他人不需要翻开代码，看一眼就明白每个文件、每个文件夹是在干什么。工程不是艺术，这个问题上不要自由发挥，创造力用在代码上。不要在项目结构上制造成本。</p>
+<h2 id="语言">语言</h2>
+<p>虽然语言并不起决定性作用，但学习任何一门语言总是有成本的，限于人力，我们应该对语言提供优先的选择，不能因为某个人掌握了一门生僻的语言，就任由在公司使用，这会造成使用者离职后无人接手、或者寻找继任者成本极高的局面，所以语言的选择要考虑语言的学习曲线、寻找工程师的难易程度。</p>
+<p>Golang。学习曲线低，性能高。主要做基础设施，如API、高并发场景等。已有的经验也证明了，就我们的规模而言，Golang可以用最少的资源换来极佳的效率。</p>
+<p>Node.js。或许我们将来的主要工具，主要做Web客户端、使用规模较小的API或需要快速开发出来的原型等。目前的观察看，稍微复杂点的项目Node.js的CPU占用率很高。原因未知。</p>
+<p>PHP。当前网站完全用PHP，相关工具链已经长期停留在比较老的版本，需要升级。新版本可以提供更好的性能，也更加贴近现代语言。</p>
+<p>Java系。需要使用的情况下提倡使用Kotlin。不提倡Scalar，学习曲线陡峭，熟悉Scalar的工程师很难找到，成本太高，而语言本身高并发的特性，不管是Golang还是Kotlin都可以提供。</p>
+<p>移动端iOS用swift；Android用Kotlin。</p>
+<p>其他语言，Rust、C#都很不错，但是我们不会用。Erlang、Haskell自己学可以，但是不要在公司里用，和Scalar同理。</p>
+<h2 id="architecture">Architecture</h2>
+<pre><code>                        database
+                            |
+                            |
+                    +------------------+
+                    |       API        |
+                    +------------------+
+                            |
+                            |
+       +-------------------------------------------+
+       |               |              |            |
+       |               |              |            |
+       |               |              |            |
+ +-----------+  +---------------+  +-------+  +----------+
+ |Web Client |  |Browser Client |  |  iOS  |  |  Android |
+ +-----------+  +---------------+  +-------+  +----------+</code></pre>
+<h1 id="node.js-1">Node.js</h1>
+<h2 id="naming-conventions">Naming conventions</h2>
+<p>文件名统一使用<code>-</code>分割法。每个单词之间都要分割，禁止使用<code>thisisafile.js</code>、<code>thisIsAFile.js</code>、 <code>ThisIsAFile.js</code>、 <code>this_is_a_file.js</code>。 ## Project structure</p>
+<p>FTC开发者的Node.js后端项目必须遵循如下目录结构，禁止在<code>.gitignore</code>中添加这些目录。</p>
+<pre><code>root
+  |---- client
+  |   |--- main.js
+  |   |--- main.css
+  |---- middlewares
+  |   |--- Framework specific middles files
+  |---- models
+  |   |--- Database operation
+  |---- server
+  |   |--- router1.js
+  |   |--- router2.js
+  |---- test
+  |   |--- test-router1.js
+  |   |--- test-router2.js
+  |---- utils   // helpers not directly related with your core service.
+  |---- views
+  |   |--- layouts
+  |   |   |--- base.html
+  |   |--- home.html
+  |---- .gitignore
+  |---- Dockerfile
+  |---- ecosystem.config.js // PM2 configuration
+  |---- index.js            // Entry point. DO NOT write detail code here.
+  |---- Jenkinsfile
+  |---- nodemon.json        // Nodemon configuration
+  |---- package-lock.json
+  |---- package.json
+  |---- README.md
+  |---- types.d.ts</code></pre>
+<h1 id="golang-1">Golang</h1>
+<p>Golang基本上不需要框架，标准库已经提供了创建网站的大部分必备工具。</p>
+<p>Golang写HTTP服务的特点是，它不需要搭建运行环境，因为Golang直接编译成一个独立的二进制文件。Golang编译器支持跨平台编译，不管你在哪个平台上写代码，都可以在本机直接编译成Linux版本，把编译好的文件直接上传到服务器硬盘上就可以运行了。不需要学习复杂的构建工具。和Unix平台上的工具（如make、rsync、systemd）配合使用就可以满足基本的需求。</p>
+<p>服务器端，只需要能把外部请求通过Nginx代理到Golang HTTP server运行的端口就可以。</p>
+<p>Golang的依赖管理工具是官方出的<a href="https://golang.github.io/dep/">dep</a>。</p>
+<p>Golang对开发目录做出了比较严格的限制，为避免在这里出现问题，我们均把源码放在<code>~/go/src</code>下面（这是默认设置）。也就是说，每个人本机上的目录都是这样的结构：</p>
+<pre><code>~/go/bin
+    /pkg
+    /src
+        /github.com
+                   /FTChinese
+                             /your-project-name
+        /gitlab.com
+                   /ftchinese
+                             /your-project-name
+        /golang.org
+        /sourcegraph.com</code></pre>
+<p>编辑器目前VS Code与Golang的结合很好，代码提示、错误提醒、自动测试。</p>
+<p>Golang工具可以参考<a href="https://github.com/avelino/awesome-go">awesome golang</a></p>
+<h1 id="mysql-1">MySQL</h1>
+<h2 id="naming-conventions-1">Naming Conventions</h2>
+<ul>
+<li>数据库名、表名用 <strong>名词</strong>、<strong>单数</strong>，单词全称，不要使用缩写，仅凭名称就可以让他人了解到这个表、这个列的用途。禁止使用大写。</li>
+<li>column名称有动词的，注意时态。多数时候用过去式、被动式。如<code>created_at</code>。</li>
+<li>表名如果有多个英语单词可供选择，使用表示集合名词的单词。</li>
+<li>名称由多个单词构成的，使用下划线分割。如: <code>published_at</code>，<code>user_name</code>。</li>
+<li>不要使用camelCase。</li>
+<li>每一个select都要使用<code>AS</code>。有的语言的驱动直接使用<code>AS</code>的名字做字段名，因此<code>AS</code>的名称采用该语言变量的命名规范。如JS或Java可以用<code>SELECT published_utc AS publishedAt</code>，Python可以用<code>SELECT published_utc AS published_at</code>。但是，如果是输出到restful api的，用camelCase。</li>
+<li>SQL关键字统一大写。非关键字小写。</li>
+</ul>
+<h2 id="数据类型">数据类型</h2>
+<h3 id="时间">时间</h3>
+<p>需要表示时间的地方，避免使用Unix时间戳，尽量使用<code>DATETIME</code>，次选<code>TIMESTAMP</code>，原因：</p>
+<ul>
+<li><p><code>DATETIME</code>表示范围从 1000-01-01 00:00:00 到 9999-12-31 23:59:59。</p></li>
+<li><p><code>TIMESTAMP</code>范围从 1970-01-01 00:00:01 到 2038-01-19 03:14:07。你无法保证存储当前数据库的系统届时肯定会升级，肯定会解决溢出问题。</p></li>
+<li><p>用原生SQL类型记录时间更易于进行计算，如统计某一天、某一年的数据等。</p></li>
+</ul>
+<p>表示Duration概念的，如一个动作持续了多久，当然还要使用Unix时间戳。</p>
+<h4 id="时区选择">时区选择</h4>
+<p>使用UTC时间，不管你在哪里，不管你的机器运行在什么时区，统一使用<code>0</code>时区时间。时间列的命名最好标示出来这是UTC时间：<code>created_utc</code>, <code>updated_utc</code>, <code>published_utc</code>, <code>last_modified_utc</code>，等等。</p>
+<p>要保证插入数据时使用UTC，至少有两种办法：</p>
+<ul>
+<li>保证客户端当前访问进程的时区设置成了UTC0；</li>
+<li>保证插入的时间是当前UTC0的时间：</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">INSERT</span> <span class="kw">INTO</span> table_name</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">SET</span> created_utc = UTC_TIMESTAMP();</a></code></pre></div>
+<p>你可以在取出数据时转换成你想要的时区：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">SELECT</span> DATE_ADD(created_utc, <span class="dt">INTERVAL</span> <span class="dv">8</span> <span class="kw">HOUR</span>) <span class="kw">AS</span> createdAt</a></code></pre></div>
+<p>这就会输出北京时间。</p>
+<p>还可以格式化成ISO 8601格式：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">SELECT</span> DATE_FORMAT(</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">    DATE_ADD(created_utc, <span class="dt">INTERVAL</span> <span class="dv">8</span> <span class="kw">HOUR</span>),</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">    <span class="st">&#39;%Y-%m-%dT%H:%i:%S+08:00&#39;</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">) <span class="kw">AS</span> createdAt</a></code></pre></div>
+<p>MySQL文档中关于时区的部分分散在不同的章节中，你应该阅读这些：</p>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/5.7/en/time-zone-support.html">MySQL Server Time Zone Support</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/5.7/en/server-options.html#option_mysqld_default-time-zone">Set server options for time zone</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_time_zone">Set dynamic system variables for time zone</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html">Date and Time Functions</a></li>
+</ul>
+<p>在<code>~/my.cnf</code>中设置时区：</p>
+<pre><code>[mysqld]
+default-time-zone=&#39;+00:00&#39;</code></pre>
+<h3 id="用varbinary和binary存储比特类型的数据">用<code>VARBINARY</code>和<code>BINARY</code>存储比特类型的数据</h3>
+<p>很多用于表示ID的随机字符串实际上是16进制表示的一串随机比特，如UUID、苹果的device token，这种数据用VARBINARY存储，既可以节省存储空间，也可以加快查询速度。这里需要用到<code>HEX()</code>和<code>UNHEX()</code>两个函数。<code>HEX</code>把二进制数字转换成16进制字符串输出，<code>UNHEX</code>则把16进制表示的字符串转换成二进制存储。IP地址也是一串比特，IPv4是32个比特，IPv6是128个比特，也可以使用VARBINARY存储。</p>
+<p>可视化的数据库软件（如MySQL Workbench、Sequel Pro）通常有以16进制显示二进制的选项，钩上。</p>
+<p>MySQL的<code>HEX()</code>默认用大写字母输出，如果你要在客户端把这种值当字符串比较，注意大小写转换。</p>
+<p>Examples:</p>
+<ul>
+<li>UUID</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">CREATE</span> <span class="kw">TABLE</span> <span class="fu">user</span> (</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">    unique_id BINARY(<span class="dv">16</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">    <span class="kw">UNIQUE</span> <span class="kw">INDEX</span>(unique_id)</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">);</a></code></pre></div>
+<p>NOTE: 这里字段名没有使用uuid，因为uuid是MySQL的一个函数名。</p>
+<p>处理UUID：</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">INSERT</span> <span class="kw">INTO</span> <span class="fu">user</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="kw">SET</span> unique_id = UNHEX(<span class="kw">REPLACE</span>(?, <span class="st">&#39;-&#39;</span>, <span class="st">&#39;&#39;</span>));</a></code></pre></div>
+<p>取出数据：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">SELECT</span> CONCAT_WS(<span class="st">&#39;-&#39;</span>,</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">    SUBSTRING(<span class="fu">LOWER</span>(HEX(unique_id)), <span class="dv">1</span>, <span class="dv">8</span>),</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3">    SUBSTRING(<span class="fu">LOWER</span>(HEX(unique_id)), <span class="dv">9</span>, <span class="dv">4</span>),</a>
+<a class="sourceLine" id="cb10-4" data-line-number="4">    SUBSTRING(<span class="fu">LOWER</span>(HEX(unique_id)), <span class="dv">13</span>, <span class="dv">4</span>),</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5">    SUBSTRING(<span class="fu">LOWER</span>(HEX(unique_id)), <span class="dv">17</span>, <span class="dv">4</span>),</a>
+<a class="sourceLine" id="cb10-6" data-line-number="6">    SUBSTRING(<span class="fu">LOWER</span>(HEX(unique_id)), <span class="dv">21</span>, <span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb10-7" data-line-number="7">) <span class="kw">AS</span> userId</a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="kw">FROM</span> <span class="fu">user</span>;</a></code></pre></div>
+<ul>
+<li>iOS Device Token</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">CREATE</span> <span class="kw">TABLE</span> ios_device (</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">    <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (token),</a>
+<a class="sourceLine" id="cb11-3" data-line-number="3">    token BINARY(<span class="dv">32</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4">    created_utc DATETIME <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="fu">CURRENT_TIMESTAMP</span></a>
+<a class="sourceLine" id="cb11-5" data-line-number="5">);</a></code></pre></div>
+<p>插入数据：</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">INSERT</span> <span class="kw">INTO</span> ios_device</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="kw">SET</span> token = HEX(?);</a></code></pre></div>
+<p>取出数据：</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">SELECT</span> <span class="fu">LOWER</span>(HEX(token)) <span class="kw">AS</span> token,</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">    DATE_ADD(created_utc, <span class="dt">INTERVAL</span> <span class="dv">8</span> <span class="kw">HOUR</span>) <span class="kw">AS</span> createdAt</a>
+<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="kw">FROM</span> ios_device</a>
+<a class="sourceLine" id="cb13-4" data-line-number="4"><span class="kw">WHERE</span> token = UNHEX(?);</a></code></pre></div>
+<h3 id="使用enum">使用ENUM</h3>
+<p>如果一个字段只有固定几个值，使用<code>ENUM</code>，如人的性别，只有<code>male</code>, <code>female</code> (或使用一个字母<code>m</code>、<code>f</code>)，顶多再加上一个<code>unknown</code>或者直接使用<code>DEFAULT NULL</code>。</p>
+<h3 id="使用布尔值">使用布尔值</h3>
+<p>对于只有两种状态的字段，使用<code>BOOLEAN</code>。如用户是否处于活跃状态，只有 <strong>是</strong> 或 <strong>否</strong> 两种状态，可以设计成<code>is_active BOOLEAN NOT NULL DEFAULT FALSE</code></p>
+<h1 id="ssh-with-git">SSH with Git</h1>
+<p><a href="https://help.github.com/articles/connecting-to-github-with-ssh/">Connecting to GitHub with SSH</a></p>
+<h2 id="generate-a-new-ssh-key">Generate a new SSH key</h2>
+<p>Although you can use your existing ssh key, it is suggested generating a new one for different host.</p>
+<p>First, change to the ssh directory <code>cd ~/.ssh</code>. If this directory does not exist, make one <code>mkdir ~/.ssh</code>.</p>
+<p>Then under this directory, generate ssh key pair with Mac’s built-in command <code>ssh-keygen</code>:</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -N &quot;My PassPhrasE&quot; -C &quot;your_git_email@example.com&quot; -f github_rsa</code></pre>
+<p>Meaning of each options:</p>
+<ul>
+<li><code>-t type</code> The type of key.</li>
+<li><code>-b bits</code> the number of bits in the key to create. For RSA, the minimum size it 1024 bits and the default is 2048 bits. Generally, 2048 bits is considered sufficient. Here we specify 4096 bits.</li>
+<li><code>-N new_passphrase</code> Each time you use this SSH key, you will be prompted to enter this passphrase. We can save it to keychain later to avoid this repetition.</li>
+<li><code>-C comment</code> A comment. Actually you can type anything.</li>
+<li><code>-f filename</code> filename for the key pair</li>
+</ul>
+<p>You can type <code>man ssh-keygen</code> to see all detailed usage.</p>
+<h2 id="adding-you-ssh-key-to-the-ssh-agent">Adding you SSH key to the <code>ssh-agent</code></h2>
+<p>Since macOS Sierra 10.12.2 or later, you will need to modify your <code>~/.ssh/config</code> file to automatically load keys into the ssh-agent and store passphrases in your keychain.</p>
+<pre><code>Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ HashKnownHosts yes
+
+Host github.com
+ HostName github.com
+ PreferredAuthentications publickey
+ IdentityFile ~/.ssh/github_rsa</code></pre>
+<p>Add your SSH private key to the ssh-agent.</p>
+<pre><code>ssh-add -K ~/.ssh/github_rsa</code></pre>
+<h2 id="adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</h2>
+<p>Copy the SSH key to clipboard</p>
+<pre><code>pbcopy &lt; ~/.ssh/github_rsa.pub</code></pre>
+<p>On you github page, <code>settings</code> -&gt; <code>SSH and GPG keys</code> -&gt; <code>Add SSH key</code></p>
+<h2 id="recover-ssh-key-passphrase">Recover SSH key passphrase</h2>
+<p>If you forgot your SSH key’s passphrase and it already saved in keychain, you can recover it this way</p>
+<p>In launchpad, type <code>keychain</code> and open <code>Keychian Access</code> app. In this app search <code>ssh</code>.</p>
+<p>Double click on the entry for your SSH key to open a new dialog box.</p>
+<p>In the lower-left corner, select <code>Show password</code>.</p>
+<p>You’ll be prompted for your administrative password. Type it into the “Keychain Access” dialog box.</p>
+<p>In your terminal <code>man ssh_config</code> to see the format for <code>config</code> file.</p>
+</body>
+</html>
