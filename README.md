@@ -1,10 +1,44 @@
 Reading for FTC Tech Team.
 
+## TOC
+
+### OS and DevOps
+
+* [Supervisor](./unix/supervisor.md)
+
+### MySQL
+
+* [Introduction](./mysql/mysql.md)
+
+### Golang
+
+* [Introduction](./golang/introduction.md)
+
+## External Links and must-read
+
+* [JavaScript Standard Style](https://github.com/standard/standard)
+* [Node.js Style Guide](https://github.com/felixge/node-style-guide)
+* [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+* [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
+* [awesome node](https://github.com/sindresorhus/awesome-nodejs)
+* [SQL Style Guide](http://www.sqlstyle.guide/)
+* [PHP the Right Way](http://www.phptherightway.com/)
+* [PSR-2: Coding Style Guide](https://www.php-fig.org/psr/psr-2/)
+* [Moden PHP](https://www.amazon.com/Modern-PHP-Features-Good-Practices/dp/1491905018)
+
 ## 原则
 
 对于Web客户端开发，我们对质量的的要求可以分成几层：`Basic`、`Enhanced`。最低等级的要求是`Basic`，一个完整的app必须达到这一级才算及格，并且必须首先达到这一级，有可能你会首先满足了`Enhanced`的要求，却没有达到`Basic`的要求，那么也是不合格的。
 
-`Basic`的要求之一是，Web客户端必须在没有JS的情况下，具备完整的功能，换句话说，服务器端的功能必须完整，用户即便在没有JS的浏览器中，依然可以完成所有的表单填写、可以查看到所有有权限的数据、任何错误都可以得到提示信息。这一阶段的重点工作是必须让服务器端具有完整的功能，即便体验不是很好，即便数据的处理繁复无比，也得保证做到数据的交互必须是持续的，绝不能中断。这一阶段，必须抑制住自己炫技的冲动，不管你的浏览器端JS写得多好、SASS写的多酷炫，都不是这一阶段的重点。掌控力的强大体现在，知道什么时候、什么地方，运用合适的技术。
+`Basic`的要求之一是，Web客户端必须在没有JS的情况下，具备完整的功能，换句话说，服务器端的功能必须完整，用户即便在没有JS的浏览器中，依然可以完成所有的表单填写、可以查看到所有有权限的数据、任何错误都可以得到提示信息。这一阶段的重点工作是必须让服务器端具有完整的功能，即便体验不是很好，即便数据的处理繁复无比，也得保证做到数据的交互必须是持续的，绝不能中断。这一阶段，必须抑制住自己炫技的冲动，不管你的浏览器端JS写得多好、SASS写的多酷炫，都不是这一阶段的重点。驾驭能力体现在，知道什么时候、什么地方，运用合适的技术。
+
+针对动态、弱类型语言，一定要约束好自己，做到：
+
+模块化。每一个函数、每一个类，尽量独立、封装起来，放在属于自己的文件里，文件名要能够简单第表达出来这个文件是干什么用的，不要在一个文件中放毫不相干的函数、类。用文件夹、文件去组成一个有机的结构。只有模块化了，才能解偶。
+
+解偶。每一个函数、每一个类、每一个项目，只完成一个工作、一个任务，不要试图在一个函数里试图完成n个功能，一堆if...else。从单元测试开始，写完一个函数、一个类，只调用它能不能完成一个单元测试？
+
+从整体架构上，也需要做到解偶。数据层、UI层、逻辑层，都要相互独立，通过一致的接口来交流。要做到某一层，用完全不同的技术替换了，却不需要更改任何其他层的东西。
 
 ## 语言
 
@@ -46,4 +80,3 @@ Java系。我们并不提倡Java系的语言。需要用到也是做一些基础
  |Web Client |  |Browser Client |  |  iOS  |  |  Android |
  +-----------+  +---------------+  +-------+  +----------+
 ```
-
