@@ -59,5 +59,3 @@ You'll be prompted for your administrative password. Type it into the "Keychain 
 
 In your terminal `man ssh_config` to see the format for `config` file.
 `man ssh-keygen` to see `ssh-keygen` usage.
-
-#github/config
