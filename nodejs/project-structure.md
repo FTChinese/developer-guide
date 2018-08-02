@@ -1,4 +1,4 @@
-FTC开发者的Node.js后端项目必须遵循如下目录结构，绝对禁止在`.gitignore`中添加这些目录
+FTC开发者的Node.js后端项目必须遵循如下目录结构，绝对禁止在`.gitignore`中添加这些目录。
 
 ```
 root
