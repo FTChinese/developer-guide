@@ -1,9 +1,9 @@
-* 数据库名、表名用**名词**、**单数**，单词全称，不要使用缩写，仅凭名称就可以让他人了解到这个表、这个列的用途。禁止使用大写。
-* 名称有动词的，注意时态。多数时候用过去式、被动式。如`created_at`。
+* 数据库名、表名用 **名词**、**单数**，单词全称，不要使用缩写，仅凭名称就可以让他人了解到这个表、这个列的用途。禁止使用大写。
+* column名称有动词的，注意时态。多数时候用过去式、被动式。如`created_at`。
 * 表名如果有多个英语单词可供选择，使用表示集合名词的单词。
 * 名称由多个单词构成的，使用下划线分割。如: `published_at`，`user_name`。
 * 不要使用camelCase。
-* 每一个select都要使用`AS`。Restful API输出JSON格式数据，因此`AS`的名称采用camelCase。如`SELECT published_utc AS publishedAt`。
+* 每一个select都要使用`AS`。有的语言的驱动直接使用`AS`的名字做字段名，因此`AS`的名称采用该语言变量的命名规范。如JS或Java可以用`SELECT published_utc AS publishedAt`，Python可以用`SELECT published_utc AS published_at`。但是，如果是输出到restful api的，用camelCase。
 * SQL关键字统一大写。非关键字小写。
 
 ## 数据类型
@@ -62,7 +62,7 @@ default-time-zone='+00:00'
 
 ### BINARY存储比特类型的数据
 
-很多用于标示ID的随机字符串实际上是16进制表示的一串随机比特，如UUID、苹果的device token，这种数据用BINARY存储，既可以节省存储空间，也可以加快查询速度。这里需要用到`HEX()`和`UNHEX()`两个函数。`HEX`把二进制数字转换成16进制字符串输出，`UNHEX`则把16进制表示的字符串转换成二进制存储。IP地址也是一串比特，IPv4是32个比特，IPv6是128个比特，也可以考虑使用BINARY存储。
+很多用于表示ID的随机字符串实际上是16进制表示的一串随机比特，如UUID、苹果的device token，这种数据用VARBINARY存储，既可以节省存储空间，也可以加快查询速度。这里需要用到`HEX()`和`UNHEX()`两个函数。`HEX`把二进制数字转换成16进制字符串输出，`UNHEX`则把16进制表示的字符串转换成二进制存储。IP地址也是一串比特，IPv4是32个比特，IPv6是128个比特，也可以使用VARBINARY存储。
 
 可视化的数据库软件（如MySQL Workbench、Sequel Pro）通常有以16进制显示二进制的选项，钩上。
 
@@ -80,7 +80,7 @@ CREATE TABLE user (
 ```
 NOTE: 这里字段名没有使用uuid，因为uuid是MySQL的一个函数名。
 
-插入数据：
+处理UUID：
 ```sql
 INSERT INTO user
 SET unique_id = UNHEX(REPLACE(?, '-', ''));
@@ -125,4 +125,4 @@ WHERE token = UNHEX(?);
 如果一个字段只有固定几个值，使用`ENUM`，如人的性别，只有`male`, `female` (或使用一个字母`m`、`f`)，顶多再加上一个`unknown`或者直接使用`DEFAULT NULL`。
 
 ### 使用布尔值
-对于只有两种状态的字段，使用`BOOLEAN`。如用户是否处于活跃状态，只有是或否两种状态，可以设计成`is_active BOOLEAN NOT NULL DEFAULT FALSE`
+对于只有两种状态的字段，使用`BOOLEAN`。如用户是否处于活跃状态，只有 **是** 或 **否** 两种状态，可以设计成`is_active BOOLEAN NOT NULL DEFAULT FALSE`
