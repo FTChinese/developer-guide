@@ -53,7 +53,7 @@ app.use(async (ctx, next) => {
 }
 ```
 
-`[uglify-js](https://github.com/mishoo/UglifyJS2)`本身没有什么依赖，但是它需要多压缩的JS生成抽象语法树。
+`[uglify-js](https://github.com/mishoo/UglifyJS2)`本身没有什么依赖，但是它需要对压缩的JS生成抽象语法树。
 
 `[csso](https://github.com/css/csso)`的依赖
 
