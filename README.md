@@ -1,6 +1,5 @@
-Repo: `https://github.com/FTChinese/developer-guide`
-
 # Overview
+Repo: `https://github.com/FTChinese/developer-guide`
 
 ## TOC
 
