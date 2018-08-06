@@ -4,7 +4,7 @@ inputfiles = metadata.md README.md nodejs/introduction.md nodejs/project-structu
 
 .PHONY: pdf createdir clean
 pdf : createdir
-	pandoc -s --pdf-engine=xelatex -o $(build_dir)/$(outfile).pdf $(inputfiles)
+	pandoc -s --toc --pdf-engine=xelatex -o $(build_dir)/$(outfile).pdf $(inputfiles)
 
 createdir :
 	mkdir -p $(build_dir)
