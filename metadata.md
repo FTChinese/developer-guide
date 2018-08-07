@@ -2,7 +2,7 @@
 author: weiguo.ni
 title: FTC Development Guide
 geometry: margin=0.5in
-fontsize: 17pt
+fontsize: 14pt
 documentclass: extarticle
 mainfont: "Noto Serif"
 sansfont: "Noto Sans"
