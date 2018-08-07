@@ -132,3 +132,12 @@ WHERE token = UNHEX(?);
 
 ### 使用布尔值
 对于只有两种状态的字段，使用`BOOLEAN`。如用户是否处于活跃状态，只有 **是** 或 **否** 两种状态，可以设计成`is_active BOOLEAN NOT NULL DEFAULT FALSE`
+
+## 数据库存储引擎
+
+当前表大量使用了MyISAM存储引擎，这是比较奇怪的选择，MyISAM的特性似乎并不适合用在这里，事实上很多地方需要用到的事InnoDB的transactions, 外键以及关系约束却一个都没用上。以后的表应该默认首选InnoDB。
+
+* InnoDB has row-level locking, MyISAM can only do full table-level locking.
+* InnoDB has better crash recovery.
+* MyISAM has FULLTEXT search indexes, InnoDB did not until MySQL 5.6 (Feb 2013).
+* InnoDB implements transactions, foreign keys and relationship constraints, MyISAM does not.
