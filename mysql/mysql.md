@@ -70,6 +70,8 @@ default-time-zone='+00:00'
 From MySQL ducumentation:
 
 > Many encryption and compression functions return strings for which the result might contain arbitrary byte values. If you want to store these results, use a column with a VARBINARY or BLOB binary string data type. This will avoid potential problems with trailing space removal or character set conversion that would change data values, such as may occur if you use a nonbinary string data type (CHAR, VARCHAR, TEXT).
+> If an application stores values from a function such as MD5() or SHA1() that returns a string of hex digits, more efficient storage and comparisons can be obtained by converting the hex representation to binary using UNHEX() and storing the result in a BINARY(N) column. Each pair of hexadecimal digits requires one byte in binary form, so the value of N depends on the length of the hex string. N is 16 for an MD5() value and 20 for a SHA1() value. For SHA2(), N ranges from 28 to 32 depending on the argument specifying the desired bit length of the result.
+> The size penalty for storing the hex string in a CHAR column is at least two times, up to eight times if the value is stored in a column that uses the utf8 character set (where each character uses 4 bytes). Storing the string also results in slower comparisons because of the larger values and the need to take character set collation rules into account.
 
 很多用于表示ID的随机字符串实际上也是16进制表示的一串随机比特，如UUID、苹果的device token，这种数据用VARBINARY存储，既可以节省存储空间，也可以加快查询速度。这里需要用到`HEX()`和`UNHEX()`两个函数。`HEX`把二进制数字转换成16进制字符串输出，`UNHEX`则把16进制表示的字符串转换成二进制存储。IP地址也是一串比特，IPv4是32个比特，IPv6是128个比特，也可以使用VARBINARY存储。
 
