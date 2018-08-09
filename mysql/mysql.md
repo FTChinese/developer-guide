@@ -1,4 +1,3 @@
-
 # MySQL
 
 ## Naming Conventions
@@ -11,21 +10,7 @@
 * 每一个select都要使用`AS`。有的语言的驱动直接使用`AS`的名字做字段名，因此`AS`的名称采用该语言变量的命名规范。如JS或Java可以用`SELECT published_utc AS publishedAt`，Python可以用`SELECT published_utc AS published_at`。但是，如果是输出到restful api的，用camelCase。
 * SQL关键字统一大写。非关键字小写。
 
-## 数据类型
-
-### 时间
-
-需要表示时间的地方，避免使用Unix时间戳，尽量使用`DATETIME`，次选`TIMESTAMP`，原因：
-
-* `DATETIME`表示范围从 1000-01-01 00:00:00 到 9999-12-31 23:59:59。
-
-* `TIMESTAMP`范围从 1970-01-01 00:00:01 到 2038-01-19 03:14:07。你无法保证存储当前数据库的系统届时肯定会升级，肯定会解决溢出问题。
-
-* 用原生SQL类型记录时间更易于进行计算，如统计某一天、某一年的数据等。
-
-表示Duration概念的，如一个动作持续了多久，当然还要使用Unix时间戳。
-
-#### 时区选择
+## 时区
 
 使用UTC时间，不管你在哪里，不管你的机器运行在什么时区，统一使用`0`时区时间。时间列的命名最好标示出来这是UTC时间：`created_utc`, `updated_utc`, `published_utc`, `last_modified_utc`，等等。
 
@@ -66,9 +51,27 @@ MySQL文档中关于时区的部分分散在不同的章节中，你应该阅读
 default-time-zone='+00:00'
 ```
 
+## 数据类型
+
+### 时间
+
+需要表示时间的地方，避免使用Unix时间戳，尽量使用`DATETIME`，次选`TIMESTAMP`，原因：
+
+* `DATETIME`表示范围从 1000-01-01 00:00:00 到 9999-12-31 23:59:59。
+
+* `TIMESTAMP`范围从 1970-01-01 00:00:01 到 2038-01-19 03:14:07。你无法保证存储当前数据库的系统届时肯定会升级，肯定会解决溢出问题。
+
+* 用原生SQL类型记录时间更易于进行计算，如统计某一天、某一年的数据等。
+
+表示Duration概念的，如一个动作持续了多久，当然还要使用Unix时间戳。
+
 ### 用`VARBINARY`和`BINARY`存储比特类型的数据
 
-很多用于表示ID的随机字符串实际上是16进制表示的一串随机比特，如UUID、苹果的device token，这种数据用VARBINARY存储，既可以节省存储空间，也可以加快查询速度。这里需要用到`HEX()`和`UNHEX()`两个函数。`HEX`把二进制数字转换成16进制字符串输出，`UNHEX`则把16进制表示的字符串转换成二进制存储。IP地址也是一串比特，IPv4是32个比特，IPv6是128个比特，也可以使用VARBINARY存储。
+From MySQL ducumentation:
+
+> Many encryption and compression functions return strings for which the result might contain arbitrary byte values. If you want to store these results, use a column with a VARBINARY or BLOB binary string data type. This will avoid potential problems with trailing space removal or character set conversion that would change data values, such as may occur if you use a nonbinary string data type (CHAR, VARCHAR, TEXT).
+
+很多用于表示ID的随机字符串实际上也是16进制表示的一串随机比特，如UUID、苹果的device token，这种数据用VARBINARY存储，既可以节省存储空间，也可以加快查询速度。这里需要用到`HEX()`和`UNHEX()`两个函数。`HEX`把二进制数字转换成16进制字符串输出，`UNHEX`则把16进制表示的字符串转换成二进制存储。IP地址也是一串比特，IPv4是32个比特，IPv6是128个比特，也可以使用VARBINARY存储。
 
 可视化的数据库软件（如MySQL Workbench、Sequel Pro）通常有以16进制显示二进制的选项，钩上。
 
