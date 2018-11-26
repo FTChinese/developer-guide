@@ -44,11 +44,8 @@ Parameters used for this event:
 Response of Subscription API for wechat pay:
 ```json
 {
-    // Provided to client app to know which order to query later.
     "ftcOrderId": "",
-    // The actual price charged for this order.
     "price": 198.00,
-    // The following the requried by wechat pay sdk.
     "appid": "",
     "partnerid": "",
     "prepayid": "",
@@ -64,12 +61,14 @@ For Alipay:
 {
     "ftcOrderId": "",
     "price": 198.00,
-    // The value of param is used to call alipay sdk.
     "param": ""
 }
 ```
+Provided to client app to know which order to query later.
 
-The value of `price` field is included in the response of both payment method and is used as the value of `VALUE` param.
+The fields `ftcOrderId` and `price` are included in the response of both payment methods. They are provided by the API to client app to know the details of the order. They are not used by any of the payment SDK. Other fields are used to call SDK of respective payment method.
+
+The value of `price`is used as the value of `VALUE` param.
 
 Howerver, current version of Subscription API (as of 2018-11-26) has not implemented the `price` field yet. Client app might get `0.0`.
 
