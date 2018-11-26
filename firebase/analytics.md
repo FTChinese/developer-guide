@@ -16,7 +16,7 @@ Parameters:
 
 The moment user opens this screen:
 
-![Payment Activity]("payment.png")
+![Payment Activity](payment.png)
 
 Parameters used for this event:
 
