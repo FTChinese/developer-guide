@@ -10,6 +10,29 @@ Parameters:
 
 * `SUCCESS` Its value is an ISO8601 date time string in device's local zone: `2018-11-26T14:22:20+08:00`.
 
+### Reading
+
+#### `SELECT_CONTENT` Event
+
+The moment user clicked an item in a list of articles in any of channel page.
+
+* `CONTENT_TYPE` Its value is `story | premium | video | interactive | column` ...
+* `ITEM_ID` is the id of an article or channel, etc..
+
+#### `VIEW_ITEM` Event
+
+When an article is fully loaded.
+
+* `ITEM_ID` the id of an article or channel.
+* `ITEM_NAME` The title of an article
+* `ITEM_CATEGORY` `story, premium, video ...` (or use `CONTENT_TYPE`?)
+
+#### `SHARE`
+
+* `CONTENT_TYPE` story, video ...
+* `ITEM_ID` the id of an article
+* `METHOD` used only for wechat share. Its a constant `wechat`.
+
 ### Subscription and Payment
 
 #### `ADD_TO_CHART` Event
@@ -86,23 +109,6 @@ Parameters:
 * `VALUE` is the same as in `CHECKOUT_EVENT`
 * `METHOD` is the same as in `CHECKOUT_EVENT`
 
-### Reading
-
-#### `SELECT_CONTENT` Event
-
-The moment user clicked an item in a list of articles in any of channel page.
-
-* `CONTENT_TYPE` Its value is `story | premium | video | interactive | column` ...
-* `ITEM_ID` is the id of an article or channel, etc..
-
-#### `VIEW_ITEM` Event
-
-When an article is fully loaded.
-
-* `ITEM_ID` the id of an article or channel.
-* `ITEM_NAME` The title of an article
-* `ITEM_CATEGORY` `story, premium, video ...` (or use `CONTENT_TYPE`?)
-
 ### Login
 
 #### `LOGIN` Event
@@ -119,11 +125,10 @@ Parameters:
 
 * `METHOD` save as the one used in `LOGIN` event.
 
-#### `SHARE`
+### Search
 
-* `CONTENT_TYPE` story, video ...
-* `ITEM_ID` the id of an article
-* `METHOD` used only for wechat share. Its a constant `wechat`.
+Not implemented in Android yet.
+
 
 ### App Launch
 
