@@ -217,10 +217,17 @@ A clicked ad is terminated immediately (meaning timer stops) while the browser o
 When an ad is displayed to the user. 
 
 ## User Properties
+
 ### UserType
 User types: VIP, Subscriber, Free Member, Visitor
+
 ### EngagementScore
 Engagement based on frequency, recency and volume
-### PendingRenewal
+
+### auto_renew_status
 iOS only
+
+### language_preference
+0 means Chinese, 1 means English, 2 means bilingual
+
 
